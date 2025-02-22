@@ -1,5 +1,3 @@
-
-
 const menuToggler = document.querySelector('.menu-toggler');
 const sideBar = document.querySelector('.side-bar');
 
@@ -9,12 +7,23 @@ const pages = document.querySelectorAll('.page');
 const filterBtn = document.querySelectorAll('.filter-item');
 const itemCategory = document.querySelectorAll('.item-category');
 
+window.addEventListener("load", function() {
+    setTimeout(() => {
+        document.body.classList.add("loaded"); // Remove preloader after delay
+    }, 1000); // Adjust delay time (2000ms = 2 seconds)
+});
+
 /*Slidebar Toggle*/ 
 
 menuToggler.addEventListener('click', function(){
     sideBar.classList.toggle('active');
 })
 
+navItemLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        sideBar.classList.remove('active'); // Remove active class to close sidebar
+    });
+});
 /* Page Navigation Functionality */
 
 for(let i = 0; i < navItemLinks.length; i++){
