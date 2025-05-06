@@ -2,8 +2,8 @@
 
 :root{
     /*Background Colors*/
-    --background-dark-100: #000000;
-    --background-dark-90: #222222;
+    --background-dark-100: #d2bdbd;
+    --background-dark-90: #0f0f0f;
     --background-dark-95: #282828;
     --background-dark-80: #333333;
     --background-dark-70: #444444;
@@ -301,7 +301,7 @@ img{
 .portfolio,
 .blog,
 .contact {
-    position: absolute;
+    position: fixed;
     top: 110%;
     right: 0;
     transform: scale(.5);
@@ -449,7 +449,14 @@ img{
     margin-right: 40px;
 }
 
-.resume-row .wrapper :is(.education, .experience){ margin-bottom: 80px;}
+.resume-row .wrapper :is(.education, .experience){ 
+    margin-bottom: 80px;
+    /* margin-top: 60px; */
+}
+.resume-row :is(.experience){ 
+    margin-bottom: 80px;
+    margin-top: 200px;
+}
 
 .resume-row h2{ margin-bottom: 20px;}
 
@@ -469,7 +476,8 @@ img{
 .resume-row .grid-item .company{
     text-align: right;
     font-size: var(--font-size-12);
-    color: var(--color-white-70);
+    /* color: var(--color-white-70); */
+    color: #f5f5f5;
 }
 
 .resume-row .grid-item :is(.education-description, .experience-description){
@@ -501,8 +509,13 @@ img{
 
 .resume-row .wrapper:nth-child(2){ width: 35%;}
 
-.resume-row .design-skill{margin-bottom: 40px;}
-
+.resume-row .design-skill{
+    margin-bottom: 40px;
+    margin-top: 170px;
+}
+.resume-row .design-skill h2{
+    margin-top: 20px;
+}
 .resume-row .progress-detail{
     display: flex;
     justify-content: space-between;
@@ -523,12 +536,14 @@ img{
     border: 1px solid var(--background-orange);
     padding: 2px;
     margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 .resume-row .progress{
     height: 100%;
     border-radius: 10px;
     background: var(--background-orange);
+    /* margin-top: 30px; */
 }
 
 /*PORTFOLIO SECTION*/
@@ -834,3 +849,6 @@ img{
 
 }
 
+.github{
+    color: #ff4500;
+}
